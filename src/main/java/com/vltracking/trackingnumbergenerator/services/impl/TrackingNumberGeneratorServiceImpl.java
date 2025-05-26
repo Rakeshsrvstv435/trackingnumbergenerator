@@ -18,15 +18,11 @@ public class TrackingNumberGeneratorServiceImpl implements TrackingNumberGenerat
     @Override
     public TrackingInfo generateTrackingNumber(String originCountryId, String destinationCountryId, String customerId, OffsetDateTime createdAt) {
 
-//        String timestamp = createdAt.toString(); // e.g., 2023-10-15T10:00:00Z
-
-        // Hash UUID + timestamp to get a fixed-length alphanumeric string
+        // HashCode of UUID + timestamp to get a fixed-length alphanumeric string
         String hashCode = DigestUtils.sha1Hex(customerId + createdAt).toUpperCase();
 
-
-        // Final tracking number: COUNTRY + HASH → length = 2 + 14 = 16
+        // Final tracking number: originCountryCode + HASH + destinationCountryCode → length = 2 + 12 + 2 = 16
         String trackingNumber = originCountryId + hashCode.substring(0, 12) + destinationCountryId;
-
 
         return TrackingInfo.builder().tracking_number(trackingNumber).created_at(LocalDateTime.now().toString()).build();
     }

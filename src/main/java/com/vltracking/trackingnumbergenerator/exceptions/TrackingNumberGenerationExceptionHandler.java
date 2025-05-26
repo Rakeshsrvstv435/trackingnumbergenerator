@@ -6,7 +6,6 @@ package com.vltracking.trackingnumbergenerator.exceptions;/*
 
 public class TrackingNumberGenerationExceptionHandler extends RuntimeException {
 
-
     public TrackingNumberGenerationExceptionHandler(String message) {
         super(message);
     }

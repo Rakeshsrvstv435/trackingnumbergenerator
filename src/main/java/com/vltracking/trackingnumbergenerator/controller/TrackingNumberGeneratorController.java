@@ -9,7 +9,6 @@ import com.vltracking.trackingnumbergenerator.constants.TrackingNumberGeneratorE
 import com.vltracking.trackingnumbergenerator.exceptions.TrackingNumberGenerationExceptionHandler;
 import com.vltracking.trackingnumbergenerator.model.ErrorResponse;
 import com.vltracking.trackingnumbergenerator.services.TrackingNumberGeneratorService;
-import jakarta.validation.constraints.Pattern;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
