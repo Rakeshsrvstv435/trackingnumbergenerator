@@ -4,7 +4,11 @@ package com.vltracking.trackingnumbergenerator.services;/*
  *
  */
 
+import com.vltracking.trackingnumbergenerator.model.TrackingInfo;
+
+import java.time.OffsetDateTime;
+
 public interface TrackingNumberGeneratorService {
 
-    String generateTrackingNumber();
+    TrackingInfo generateTrackingNumber(String originCountryId, String destinationCountryId, String customerId, OffsetDateTime createdAt);
 }

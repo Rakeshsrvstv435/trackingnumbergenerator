@@ -1,15 +1,13 @@
-package com.vltracking.trackingnumbergenerator.exceptions.impl;/*
+package com.vltracking.trackingnumbergenerator.exceptions;/*
  *
  * Created By rakeshsrivastav On 26/05/25
  *
  */
 
-import com.vltracking.trackingnumbergenerator.exceptions.TokenGenerationExceptions;
-
-public class TokenGenerationExceptionsImpl extends RuntimeException implements TokenGenerationExceptions {
+public class TrackingNumberGenerationExceptionHandler extends RuntimeException {
 
 
-    public TokenGenerationExceptionsImpl(String message) {
+    public TrackingNumberGenerationExceptionHandler(String message) {
         super(message);
     }
 }
